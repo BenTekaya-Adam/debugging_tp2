@@ -3,7 +3,7 @@ def traiter_donnees(liste_entrees):
     vus = set()
 
     # � Erreur potentielle dans la borne de la boucle
-    for i in range(len(liste_entrees) + 1):
+    for i in range(len(liste_entrees)):
         element = liste_entrees[i]
 
     # Logique de filtrage des doublons
@@ -12,8 +12,9 @@ def traiter_donnees(liste_entrees):
         valeur_calculee = element * 1.5
         resultats.append(valeur_calculee)
         # � Quelque chose manque ici pour que 'vus' fonctionne...
-
+        vus.add(element)
     return resultats
+
 
 
 # Jeu de données de test
